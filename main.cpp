@@ -8,8 +8,8 @@ int main()
 {
     //variables
     vector<vector<int> > matrix;
-    int row = 1;
-    int col = 1;
+    int row = 0;
+    int col = 0;
 
     //Matrix sizing
     matrix.resize(13);
@@ -17,19 +17,18 @@ int main()
     {
         matrix[i].resize(13);
     }
-    
 
     //Matrix Border
-    for (int r = 1; r<matrix.size(); r++){
-        matrix[r][0] = row;
+    for (int x = 0; x<matrix.size(); x++){
+        matrix[x][0] = row;
         row++;
     }
-    for (int c = 1; c<matrix.size(); c++){
-        matrix[0][c] = col;
+    for (int y = 0; y<matrix.size(); y++){
+        matrix[0][y] = col;
         col++;
     }
 
-    cout<< " X |";
+    //cout<< " X |";
     //Matrix value initialization and print
     for (int r = 1; r<matrix.size(); r++)
     {
@@ -44,11 +43,8 @@ int main()
             else{
                 cout<<matrix[r][c]<<"|";
             }
-        }
+         }
     cout<<endl;
     }
-   
-
-
     return 0;
 }
